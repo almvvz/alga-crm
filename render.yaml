@@ -1,0 +1,24 @@
+# Render Blueprint: one web service that serves the API and the React app.
+# The database lives on Neon (free, no expiry). Paste its connection string
+# into DATABASE_URL in the Render dashboard.
+services:
+  - type: web
+    name: alga-crm
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NAME
+        sync: false
