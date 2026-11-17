@@ -1,5 +1,3 @@
--- Students. Safe to run on a database that already has this table
--- (the one created by hand during development).
 CREATE TABLE IF NOT EXISTS students (
   id           SERIAL PRIMARY KEY,
   full_name    TEXT NOT NULL,
@@ -14,8 +12,6 @@ CREATE TABLE IF NOT EXISTS students (
   CONSTRAINT students_status_check CHECK (status IN ('lead', 'trial', 'active', 'inactive'))
 );
 
--- The hand-made table used VARCHAR(n) limits (e.g. programme VARCHAR(25)).
--- Long values would crash inserts, so widen them. A no-op on a fresh database.
 ALTER TABLE students
   ALTER COLUMN full_name   TYPE TEXT,
   ALTER COLUMN status      TYPE TEXT,
