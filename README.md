@@ -2,8 +2,11 @@
  
 A custom CRM I built for **Alga**, an exam-prep tutoring startup I co-founded. It replaced a 12-sheet Excel workbook that tracked students, lessons, tutor pay and profit sharing, and it is used in production by both founders.
  
-> Screenshots: add 2-3 images here (`docs/dashboard.png`, `docs/lessons.png`, `docs/settlement.png`).
-> Use demo data only, never real student information.
+<p>
+  <img src="docs/dashboard.png" width="49%" alt="Dashboard" />
+  <img src="docs/lessons.png" width="49%" alt="Lessons">
+  <img src="docs/settlement.png" width="49%" alt="Settlement" />
+</p>
  
 ## What it does
  
