@@ -15,8 +15,6 @@ import Team from "./pages/Team.jsx";
 import TutorDetail from "./pages/TutorDetail.jsx";
 import Tutors from "./pages/Tutors.jsx";
 
-// Everything except /login needs a signed-in user. A user who must change their
-// password sees only that screen until they do.
 function Protected() {
   const { user, loading } = useAuth();
   if (loading) return <p className="p-10 text-center text-sm text-slate-500">Loading…</p>;
